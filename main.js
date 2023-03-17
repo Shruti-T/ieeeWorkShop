@@ -1,12 +1,17 @@
-document
-  .getElementById("formSubmit")
-  .addEventListener("submit", (formresponse) => {
-    formresponse.preventDefault();
-    formData["name"] = document.getElementById("name").value;
-    formData["email"] = document.getElementById("email").value;
-    sendRegistration(formData);
-    return false;
-  });
+let eventForm;
+if (document.getElementById("formSubmit1")) {
+  eventForm = document.getElementById("formSubmit1");
+} else if (document.getElementById("formSubmit2")) {
+  eventForm = document.getElementById("formSubmit2");
+}
+
+eventForm.addEventListener("submit", (formresponse) => {
+  formresponse.preventDefault();
+  formData["name"] = document.getElementById("name").value;
+  formData["email"] = document.getElementById("email").value;
+  sendRegistration(formData);
+  return false;
+});
 
 let formData = {};
 function sendRegistration() {
