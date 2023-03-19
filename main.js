@@ -28,7 +28,7 @@ if (document.getElementById("formSubmit1")) {
 let formData = {};
 function sendRegistration() {
   $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbxJgQYTmyW9LksxyaPvY8hMXKaLdFXIku9uydJ_HUkU6sVk24qEvumMJyJM9BWGYIOJ-Q/exec",
+    url: "https://script.google.com/macros/s/AKfycbynxcyQFZTcHuz_TZr9QmrUcWAJap4dT5fZ4cfbKiNHva4JfvzUVAO6GGNwoKsD34GRcg/exec",
     type: "POST",
     data: formData,
 
