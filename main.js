@@ -1,34 +1,23 @@
-if (document.getElementById("formSubmit1")) {
-  document
-    .getElementById("formSubmit1")
-    .addEventListener("submit", (formresponse) => {
-      formresponse.preventDefault();
-      formData["name"] = document.getElementById("name").value;
-      formData["email"] = document.getElementById("email").value;
-      formData["event"] = "squabble";
-      sendRegistration(formData);
-      return false;
-    });
-} else if (document.getElementById("formSubmit2")) {
-  document
-    .getElementById("formSubmit2")
-    .addEventListener("submit", (formresponse) => {
-      formresponse.preventDefault();
-      formData["name"] = document.getElementById("name").value;
-      formData["email"] = document.getElementById("email").value;
-      formData["name2"] = document.getElementById("name2").value;
-      formData["email2"] = document.getElementById("email2").value;
+document
+  .getElementById("formSubmit")
+  .addEventListener("submit", (formresponse) => {
+    formresponse.preventDefault();
+    formData["name"] = document.getElementById("name").value;
+    formData["email"] = document.getElementById("email").value;
+    formData["number"] = document.getElementById("number").value;
+    formData["branch"] = document.getElementById("branch").value;
+    formData["year"] = document.getElementById("year").value;
+    formData["college"] = document.getElementById("college").value;
 
-      formData["event"] = "inquisitive";
-      sendRegistration(formData);
-      return false;
-    });
-}
+    formData["event"] = "squabble";
+    sendRegistration(formData);
+    return false;
+  });
 
 let formData = {};
 function sendRegistration() {
   $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbynxcyQFZTcHuz_TZr9QmrUcWAJap4dT5fZ4cfbKiNHva4JfvzUVAO6GGNwoKsD34GRcg/exec",
+    url: "https://script.google.com/macros/s/AKfycbyW5hRjb1FKFGz2og-yl4RxrwDb9kaUDr14d2HjA9FWxthlSVcN-uj_KqJRiCa1vmfX0g/exec",
     type: "POST",
     data: formData,
 
