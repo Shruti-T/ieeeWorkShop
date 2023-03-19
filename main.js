@@ -9,23 +9,23 @@ document
     formData["year"] = document.getElementById("year").value;
     formData["college"] = document.getElementById("college").value;
 
+    // console.log(formData);
     formData["event"] = "squabble";
     sendRegistration(formData);
-    return false;
+    return true;
   });
 
 let formData = {};
-function sendRegistration() {
+function sendRegistration(formData) {
   $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbyW5hRjb1FKFGz2og-yl4RxrwDb9kaUDr14d2HjA9FWxthlSVcN-uj_KqJRiCa1vmfX0g/exec",
+    url: "https://script.google.com/macros/s/AKfycbzFJDNTdfDQCBz13L5xNsYptRO31otbYZPGEZMwcItuLqyA-NiT_BxAuoyMfZ9631oY/exec",
     type: "POST",
     data: formData,
-
     success: function (res) {
       if (res.status == "success") {
-        alert("DONE");
+        alert("Done");
       } else {
-        alert("FAIL");
+        alert("Fail");
       }
     },
     error: function (res) {
